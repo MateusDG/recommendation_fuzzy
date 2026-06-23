@@ -1,41 +1,89 @@
 {
   "communities": {
     "0": [
+      "cronograma_tarefas_tcc_revisao_bibliografica",
       "investigacao_dataset_amazon_reviews_2023",
       "investigacao_dataset_fuzzy_ontology_system",
       "investigacao_dataset_kouzina_club",
       "investigacao_dataset_premium_product",
       "investigacao_tcc_revisao_dataset_guo_2022",
       "investigacao_tcc_revisao_dataset_haw_2024",
+      "investigacao_tcc_revisao_dataset_karthik_2021",
       "investigacao_tcc_revisao_dataset_yager_2003"
     ],
     "1": [
-      "cronograma_tarefas_tcc_revisao_bibliografica",
-      "investigacao_tcc_revisao_dataset_karthik_2021"
+      "recommender_systems_survey_2005_survey_2005",
+      "recommender_systems_survey_collaborative_filtering",
+      "recommender_systems_survey_content_based_filtering",
+      "recommender_systems_survey_hybrid_methods",
+      "recommender_systems_survey_recommender_systems",
+      "revisiting_recommender_systems_investigative_survey",
+      "user_cold_start_problem_cold_start",
+      "user_cold_start_problem_systematic_review"
     ],
     "2": [
+      "a_fuzzy_recommendation_system_fuzzy_sentiment_ontology",
+      "a_hybrid_ontology_based_recommendation_system_hybrid_ontology",
+      "concept_ontology_modeling",
+      "concept_sentiment_analysis"
+    ],
+    "3": [
+      "a_survey_on_knowledge_graph_based_kg_rec",
+      "explainable_recommendation_explainable_rec_survey",
+      "knowledge_basedrecommendation_kb_rec"
+    ],
+    "4": [
+      "concept_collaborative_filtering",
+      "deep_learning_based_recommender_system_dl_survey",
+      "hybrid_recommender_systems_survey_hybrid_survey"
+    ],
+    "5": [
       "investigacao_dataset_cold_start",
       "investigacao_tcc_revisao_dataset_yuan_2023"
     ],
-    "3": [
+    "6": [
+      "a_survey_on_session_based_recommender_systems_sbrs"
+    ],
+    "7": [
+      "bridging_language_and_items_language_retrieval"
+    ],
+    "8": [
       "cronograma_tarefas_tcc_desenvolvimento"
     ],
-    "4": [
+    "9": [
+      "fuzzy_logic_in_recommender_systems_fuzzy_logic"
+    ],
+    "10": [
       "readme_recommendation_fuzzy"
+    ],
+    "11": [
+      "recommendation_systems_principles_methods_principles_methods"
     ]
   },
   "cohesion": {
-    "0": 0.2857142857142857,
-    "1": 1.0,
-    "2": 1.0,
-    "3": 1.0,
-    "4": 1.0
+    "0": 0.2222222222222222,
+    "1": 0.2857142857142857,
+    "2": 0.5,
+    "3": 0.6666666666666666,
+    "4": 0.6666666666666666,
+    "5": 1.0,
+    "6": 1.0,
+    "7": 1.0,
+    "8": 1.0,
+    "9": 1.0,
+    "10": 1.0,
+    "11": 1.0
   },
   "gods": [
     {
       "id": "investigacao_dataset_fuzzy_ontology_system",
       "label": "Sistema de Recomenda\u00e7\u00e3o Baseado em Ontologias Fuzzy",
       "degree": 8
+    },
+    {
+      "id": "recommender_systems_survey_recommender_systems",
+      "label": "Recommender Systems",
+      "degree": 5
     },
     {
       "id": "investigacao_dataset_cold_start",
@@ -48,39 +96,34 @@
       "degree": 2
     },
     {
-      "id": "investigacao_dataset_amazon_reviews_2023",
-      "label": "Amazon Reviews 2023 \u2014 Home and Kitchen",
-      "degree": 1
+      "id": "a_survey_on_knowledge_graph_based_kg_rec",
+      "label": "Knowledge Graph-Based Recommender Systems",
+      "degree": 2
     },
     {
-      "id": "investigacao_dataset_kouzina_club",
-      "label": "Kouzina Club",
-      "degree": 1
+      "id": "a_fuzzy_recommendation_system_fuzzy_sentiment_ontology",
+      "label": "Fuzzy Recommendation System with Sentiment Analysis and Ontology",
+      "degree": 2
     },
     {
-      "id": "investigacao_dataset_premium_product",
-      "label": "Produto Premium/Luxo",
-      "degree": 1
+      "id": "concept_ontology_modeling",
+      "label": "Ontology Modeling",
+      "degree": 2
     },
     {
-      "id": "investigacao_tcc_revisao_dataset_haw_2024",
-      "label": "Haw et al. (2024)",
-      "degree": 1
+      "id": "concept_collaborative_filtering",
+      "label": "Collaborative Filtering",
+      "degree": 2
     },
     {
-      "id": "investigacao_tcc_revisao_dataset_yuan_2023",
-      "label": "Yuan & Hernandez (2023)",
-      "degree": 1
+      "id": "recommender_systems_survey_collaborative_filtering",
+      "label": "Collaborative Filtering",
+      "degree": 2
     },
     {
-      "id": "investigacao_tcc_revisao_dataset_guo_2022",
-      "label": "Guo et al. (2022)",
-      "degree": 1
-    },
-    {
-      "id": "investigacao_tcc_revisao_dataset_yager_2003",
-      "label": "Yager (2003)",
-      "degree": 1
+      "id": "recommender_systems_survey_content_based_filtering",
+      "label": "Content-based Filtering",
+      "degree": 2
     }
   ],
   "surprises": [
@@ -96,17 +139,6 @@
       "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; peripheral node `Guo et al. (2022)` unexpectedly reaches hub `Sistema de Recomenda\u00e7\u00e3o Baseado em Ontologias Fuzzy`"
     },
     {
-      "source": "Karthik & Ganapathy (2021)",
-      "target": "Sistema de Recomenda\u00e7\u00e3o Baseado em Ontologias Fuzzy",
-      "source_files": [
-        "investigacao_tcc_revisao_dataset.md",
-        "investigacao_dataset.md"
-      ],
-      "confidence": "EXTRACTED",
-      "relation": "cites",
-      "why": "connects across different repos/directories; bridges separate communities; peripheral node `Karthik & Ganapathy (2021)` unexpectedly reaches hub `Sistema de Recomenda\u00e7\u00e3o Baseado em Ontologias Fuzzy`"
-    },
-    {
       "source": "Yager (2003)",
       "target": "Sistema de Recomenda\u00e7\u00e3o Baseado em Ontologias Fuzzy",
       "source_files": [
@@ -118,30 +150,41 @@
       "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; peripheral node `Yager (2003)` unexpectedly reaches hub `Sistema de Recomenda\u00e7\u00e3o Baseado em Ontologias Fuzzy`"
     },
     {
-      "source": "Haw et al. (2024)",
-      "target": "Sistema de Recomenda\u00e7\u00e3o Baseado em Ontologias Fuzzy",
+      "source": "Recommender Systems Survey (2005)",
+      "target": "Recommender Systems",
       "source_files": [
-        "investigacao_tcc_revisao_dataset.md",
-        "investigacao_dataset.md"
-      ],
-      "confidence": "EXTRACTED",
-      "relation": "cites",
-      "why": "connects across different repos/directories; peripheral node `Haw et al. (2024)` unexpectedly reaches hub `Sistema de Recomenda\u00e7\u00e3o Baseado em Ontologias Fuzzy`"
-    },
-    {
-      "source": "Revis\u00e3o bibliogr\u00e1fica e levantamento de Datasets",
-      "target": "Karthik & Ganapathy (2021)",
-      "source_files": [
-        "arquivos_tcc/Cronograma de Tarefas TCC_d1ea91f9.md",
-        "investigacao_tcc_revisao_dataset.md"
+        "recommender-systems-survey-2005.pdf",
+        "Recommender systems survey.pdf"
       ],
       "confidence": "INFERRED",
       "relation": "references",
-      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories"
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; peripheral node `Recommender Systems Survey (2005)` unexpectedly reaches hub `Recommender Systems`"
+    },
+    {
+      "source": "Investigative Survey of Recommender Systems",
+      "target": "Recommender Systems",
+      "source_files": [
+        "Revisiting recommender systems an investigative survey.pdf",
+        "Recommender systems survey.pdf"
+      ],
+      "confidence": "INFERRED",
+      "relation": "references",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; peripheral node `Investigative Survey of Recommender Systems` unexpectedly reaches hub `Recommender Systems`"
+    },
+    {
+      "source": "Cold Start Problem",
+      "target": "Recommender Systems",
+      "source_files": [
+        "User_Cold_Start_Problem_in_Recommendation_Systems_A_Systematic_Review.pdf",
+        "Recommender systems survey.pdf"
+      ],
+      "confidence": "INFERRED",
+      "relation": "conceptually_related_to",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; peripheral node `Cold Start Problem` unexpectedly reaches hub `Recommender Systems`"
     }
   ],
   "tokens": {
-    "input": 21674,
-    "output": 1568
+    "input": 2811,
+    "output": 4045
   }
 }

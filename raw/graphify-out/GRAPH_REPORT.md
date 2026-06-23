@@ -4,12 +4,12 @@
 - cluster-only mode — file stats not available
 
 ## Summary
-- 13 nodes · 10 edges · 5 communities (1 shown, 4 thin omitted)
-- Extraction: 60% EXTRACTED · 40% INFERRED · 0% AMBIGUOUS · INFERRED: 4 edges (avg confidence: 0.8)
+- 35 nodes · 25 edges · 12 communities (5 shown, 7 thin omitted)
+- Extraction: 56% EXTRACTED · 44% INFERRED · 0% AMBIGUOUS · INFERRED: 11 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `bf83c5cb`
+- Built from commit: `fc23ee6c`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -19,59 +19,85 @@
 - [[_COMMUNITY_Community 2|Community 2]]
 - [[_COMMUNITY_Community 3|Community 3]]
 - [[_COMMUNITY_Community 4|Community 4]]
+- [[_COMMUNITY_Community 5|Community 5]]
+- [[_COMMUNITY_Community 6|Community 6]]
+- [[_COMMUNITY_Community 7|Community 7]]
+- [[_COMMUNITY_Community 8|Community 8]]
+- [[_COMMUNITY_Community 9|Community 9]]
+- [[_COMMUNITY_Community 10|Community 10]]
+- [[_COMMUNITY_Community 11|Community 11]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `Sistema de Recomendação Baseado em Ontologias Fuzzy` - 8 edges
-2. `Cold Start Problem` - 2 edges
-3. `Karthik & Ganapathy (2021)` - 2 edges
-4. `Amazon Reviews 2023 — Home and Kitchen` - 1 edges
-5. `Kouzina Club` - 1 edges
-6. `Produto Premium/Luxo` - 1 edges
-7. `Haw et al. (2024)` - 1 edges
-8. `Yuan & Hernandez (2023)` - 1 edges
-9. `Guo et al. (2022)` - 1 edges
-10. `Yager (2003)` - 1 edges
+2. `Recommender Systems` - 5 edges
+3. `Cold Start Problem` - 2 edges
+4. `Karthik & Ganapathy (2021)` - 2 edges
+5. `Knowledge Graph-Based Recommender Systems` - 2 edges
+6. `Fuzzy Recommendation System with Sentiment Analysis and Ontology` - 2 edges
+7. `Ontology Modeling` - 2 edges
+8. `Collaborative Filtering` - 2 edges
+9. `Collaborative Filtering` - 2 edges
+10. `Content-based Filtering` - 2 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `Guo et al. (2022)` --cites--> `Sistema de Recomendação Baseado em Ontologias Fuzzy`  [INFERRED]
   investigacao_tcc_revisao_dataset.md → investigacao_dataset.md
-- `Karthik & Ganapathy (2021)` --cites--> `Sistema de Recomendação Baseado em Ontologias Fuzzy`  [EXTRACTED]
-  investigacao_tcc_revisao_dataset.md → investigacao_dataset.md
 - `Yager (2003)` --cites--> `Sistema de Recomendação Baseado em Ontologias Fuzzy`  [INFERRED]
   investigacao_tcc_revisao_dataset.md → investigacao_dataset.md
-- `Haw et al. (2024)` --cites--> `Sistema de Recomendação Baseado em Ontologias Fuzzy`  [EXTRACTED]
-  investigacao_tcc_revisao_dataset.md → investigacao_dataset.md
-- `Revisão bibliográfica e levantamento de Datasets` --references--> `Karthik & Ganapathy (2021)`  [INFERRED]
-  arquivos_tcc/Cronograma de Tarefas TCC_d1ea91f9.md → investigacao_tcc_revisao_dataset.md
+- `Recommender Systems Survey (2005)` --references--> `Recommender Systems`  [INFERRED]
+  recommender-systems-survey-2005.pdf → Recommender systems survey.pdf
+- `Investigative Survey of Recommender Systems` --references--> `Recommender Systems`  [INFERRED]
+  Revisiting recommender systems an investigative survey.pdf → Recommender systems survey.pdf
+- `Cold Start Problem` --conceptually_related_to--> `Recommender Systems`  [INFERRED]
+  User_Cold_Start_Problem_in_Recommendation_Systems_A_Systematic_Review.pdf → Recommender systems survey.pdf
 
 ## Import Cycles
 - None detected.
 
 ## Hyperedges (group relationships)
-- **TCC Methodology and Dataset Selection** — investigacao_dataset_amazon_reviews_2023, investigacao_dataset_kouzina_club, investigacao_dataset_premium_product [EXTRACTED 0.95]
-- **Fuzzy Ontology Recommendation Research Core** — investigacao_tcc_revisao_dataset_karthik_2021, investigacao_tcc_revisao_dataset_haw_2024, investigacao_dataset_fuzzy_ontology_system [EXTRACTED 1.00]
+- **Semantic and Knowledge-Aware Recommendation** — a_survey_on_knowledge_graph_based_kg_rec, knowledge_basedrecommendation_kb_rec, a_hybrid_ontology_based_recommendation_system_hybrid_ontology, a_fuzzy_recommendation_system_fuzzy_sentiment_ontology [INFERRED 0.85]
+- **Hybrid Recommendation Frameworks** — hybrid_recommender_systems_survey_hybrid_survey, a_hybrid_ontology_based_recommendation_system_hybrid_ontology, recommendation_systems_principles_methods_principles_methods [INFERRED 0.80]
+- **Core Recommendation Methodologies** — recommender_systems_survey_collaborative_filtering, recommender_systems_survey_content_based_filtering, recommender_systems_survey_hybrid_methods [EXTRACTED 0.95]
 
-## Communities (5 total, 4 thin omitted)
+## Communities (12 total, 7 thin omitted)
 
 ### Community 0 - "Community 0"
+Cohesion: 0.22
+Nodes (9): Revisão bibliográfica e levantamento de Datasets, Amazon Reviews 2023 — Home and Kitchen, Sistema de Recomendação Baseado em Ontologias Fuzzy, Kouzina Club, Produto Premium/Luxo, Guo et al. (2022), Haw et al. (2024), Karthik & Ganapathy (2021) (+1 more)
+
+### Community 1 - "Community 1"
 Cohesion: 0.29
-Nodes (7): Amazon Reviews 2023 — Home and Kitchen, Sistema de Recomendação Baseado em Ontologias Fuzzy, Kouzina Club, Produto Premium/Luxo, Guo et al. (2022), Haw et al. (2024), Yager (2003)
+Nodes (8): Recommender Systems Survey (2005), Collaborative Filtering, Content-based Filtering, Hybrid Recommendation Methods, Recommender Systems, Investigative Survey of Recommender Systems, Cold Start Problem, User Cold Start Problem Systematic Review
+
+### Community 2 - "Community 2"
+Cohesion: 0.50
+Nodes (4): Fuzzy Recommendation System with Sentiment Analysis and Ontology, Hybrid Ontology-Based Recommendation System, Ontology Modeling, Sentiment Analysis
+
+### Community 3 - "Community 3"
+Cohesion: 0.67
+Nodes (3): Knowledge Graph-Based Recommender Systems, Explainable Recommendation Survey, Knowledge-Based Recommendation
+
+### Community 4 - "Community 4"
+Cohesion: 0.67
+Nodes (3): Collaborative Filtering, Deep Learning Based Recommender System Survey, Hybrid Recommender Systems Survey
 
 ## Knowledge Gaps
-- **8 isolated node(s):** `recommendation_fuzzy`, `Amazon Reviews 2023 — Home and Kitchen`, `Kouzina Club`, `Produto Premium/Luxo`, `Haw et al. (2024)` (+3 more)
+- **21 isolated node(s):** `recommendation_fuzzy`, `Amazon Reviews 2023 — Home and Kitchen`, `Kouzina Club`, `Produto Premium/Luxo`, `Haw et al. (2024)` (+16 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **4 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **7 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Sistema de Recomendação Baseado em Ontologias Fuzzy` connect `Community 0` to `Community 1`, `Community 2`?**
-  _High betweenness centrality (0.652) - this node is a cross-community bridge._
-- **Why does `Cold Start Problem` connect `Community 2` to `Community 0`?**
-  _High betweenness centrality (0.136) - this node is a cross-community bridge._
-- **Why does `Karthik & Ganapathy (2021)` connect `Community 1` to `Community 0`?**
-  _High betweenness centrality (0.136) - this node is a cross-community bridge._
+- **Why does `Sistema de Recomendação Baseado em Ontologias Fuzzy` connect `Community 0` to `Community 5`?**
+  _High betweenness centrality (0.077) - this node is a cross-community bridge._
+- **Why does `Cold Start Problem` connect `Community 5` to `Community 0`?**
+  _High betweenness centrality (0.016) - this node is a cross-community bridge._
 - **Are the 3 inferred relationships involving `Sistema de Recomendação Baseado em Ontologias Fuzzy` (e.g. with `Kouzina Club` and `Guo et al. (2022)`) actually correct?**
   _`Sistema de Recomendação Baseado em Ontologias Fuzzy` has 3 INFERRED edges - model-reasoned connections that need verification._
+- **Are the 3 inferred relationships involving `Recommender Systems` (e.g. with `Recommender Systems Survey (2005)` and `Investigative Survey of Recommender Systems`) actually correct?**
+  _`Recommender Systems` has 3 INFERRED edges - model-reasoned connections that need verification._
+- **Are the 2 inferred relationships involving `Knowledge Graph-Based Recommender Systems` (e.g. with `Knowledge-Based Recommendation` and `Explainable Recommendation Survey`) actually correct?**
+  _`Knowledge Graph-Based Recommender Systems` has 2 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `recommendation_fuzzy`, `Amazon Reviews 2023 — Home and Kitchen`, `Kouzina Club` to the rest of the system?**
-  _10 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _23 weakly-connected nodes found - possible documentation gaps or missing edges._

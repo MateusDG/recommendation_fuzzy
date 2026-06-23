@@ -4,30 +4,44 @@
   "graph": {
     "hyperedges": [
       {
-        "id": "tcc_methodology_flow",
-        "label": "TCC Methodology and Dataset Selection",
+        "id": "semantic_recommendation_approaches",
+        "label": "Semantic and Knowledge-Aware Recommendation",
         "nodes": [
-          "investigacao_dataset_amazon_reviews_2023",
-          "investigacao_dataset_kouzina_club",
-          "investigacao_dataset_premium_product"
+          "a_survey_on_knowledge_graph_based_kg_rec",
+          "knowledge_basedrecommendation_kb_rec",
+          "a_hybrid_ontology_based_recommendation_system_hybrid_ontology",
+          "a_fuzzy_recommendation_system_fuzzy_sentiment_ontology"
+        ],
+        "relation": "participate_in",
+        "confidence": "INFERRED",
+        "confidence_score": 0.85,
+        "source_file": "A Survey on Knowledge Graph-Based.pdf"
+      },
+      {
+        "id": "hybrid_and_integrated_systems",
+        "label": "Hybrid Recommendation Frameworks",
+        "nodes": [
+          "hybrid_recommender_systems_survey_hybrid_survey",
+          "a_hybrid_ontology_based_recommendation_system_hybrid_ontology",
+          "recommendation_systems_principles_methods_principles_methods"
+        ],
+        "relation": "form",
+        "confidence": "INFERRED",
+        "confidence_score": 0.8,
+        "source_file": "Hybrid_Recommender_Systems_Survey_and_Experiments.pdf"
+      },
+      {
+        "id": "recommendation_methodologies",
+        "label": "Core Recommendation Methodologies",
+        "nodes": [
+          "recommender_systems_survey_collaborative_filtering",
+          "recommender_systems_survey_content_based_filtering",
+          "recommender_systems_survey_hybrid_methods"
         ],
         "relation": "participate_in",
         "confidence": "EXTRACTED",
         "confidence_score": 0.95,
-        "source_file": "investigacao_dataset.md"
-      },
-      {
-        "id": "fuzzy_ontology_research_core",
-        "label": "Fuzzy Ontology Recommendation Research Core",
-        "nodes": [
-          "investigacao_tcc_revisao_dataset_karthik_2021",
-          "investigacao_tcc_revisao_dataset_haw_2024",
-          "investigacao_dataset_fuzzy_ontology_system"
-        ],
-        "relation": "form",
-        "confidence": "EXTRACTED",
-        "confidence_score": 1.0,
-        "source_file": "investigacao_tcc_revisao_dataset.md"
+        "source_file": "Recommender systems survey.pdf"
       }
     ]
   },
@@ -36,10 +50,10 @@
       "label": "recommendation_fuzzy",
       "file_type": "code",
       "source_file": "README.md",
-      "community": 4,
+      "community": 10,
       "norm_label": "recommendation_fuzzy",
-      "id": "readme_recommendation_fuzzy",
-      "community_name": "Community 4"
+      "community_name": "Community 10",
+      "id": "readme_recommendation_fuzzy"
     },
     {
       "label": "Amazon Reviews 2023 \u2014 Home and Kitchen",
@@ -47,8 +61,8 @@
       "source_file": "investigacao_dataset.md",
       "community": 0,
       "norm_label": "amazon reviews 2023 \u2014 home and kitchen",
-      "id": "investigacao_dataset_amazon_reviews_2023",
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "id": "investigacao_dataset_amazon_reviews_2023"
     },
     {
       "label": "Kouzina Club",
@@ -56,8 +70,8 @@
       "source_file": "investigacao_dataset.md",
       "community": 0,
       "norm_label": "kouzina club",
-      "id": "investigacao_dataset_kouzina_club",
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "id": "investigacao_dataset_kouzina_club"
     },
     {
       "label": "Sistema de Recomenda\u00e7\u00e3o Baseado em Ontologias Fuzzy",
@@ -65,17 +79,17 @@
       "source_file": "investigacao_dataset.md",
       "community": 0,
       "norm_label": "sistema de recomendacao baseado em ontologias fuzzy",
-      "id": "investigacao_dataset_fuzzy_ontology_system",
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "id": "investigacao_dataset_fuzzy_ontology_system"
     },
     {
       "label": "Cold Start Problem",
       "file_type": "concept",
       "source_file": "investigacao_dataset.md",
-      "community": 2,
+      "community": 5,
       "norm_label": "cold start problem",
-      "id": "investigacao_dataset_cold_start",
-      "community_name": "Community 2"
+      "community_name": "Community 5",
+      "id": "investigacao_dataset_cold_start"
     },
     {
       "label": "Produto Premium/Luxo",
@@ -83,17 +97,17 @@
       "source_file": "investigacao_dataset.md",
       "community": 0,
       "norm_label": "produto premium/luxo",
-      "id": "investigacao_dataset_premium_product",
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "id": "investigacao_dataset_premium_product"
     },
     {
       "label": "Karthik & Ganapathy (2021)",
       "file_type": "paper",
       "source_file": "investigacao_tcc_revisao_dataset.md",
-      "community": 1,
+      "community": 0,
       "norm_label": "karthik & ganapathy (2021)",
-      "id": "investigacao_tcc_revisao_dataset_karthik_2021",
-      "community_name": "Community 1"
+      "community_name": "Community 0",
+      "id": "investigacao_tcc_revisao_dataset_karthik_2021"
     },
     {
       "label": "Haw et al. (2024)",
@@ -101,17 +115,17 @@
       "source_file": "investigacao_tcc_revisao_dataset.md",
       "community": 0,
       "norm_label": "haw et al. (2024)",
-      "id": "investigacao_tcc_revisao_dataset_haw_2024",
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "id": "investigacao_tcc_revisao_dataset_haw_2024"
     },
     {
       "label": "Yuan & Hernandez (2023)",
       "file_type": "paper",
       "source_file": "investigacao_tcc_revisao_dataset.md",
-      "community": 2,
+      "community": 5,
       "norm_label": "yuan & hernandez (2023)",
-      "id": "investigacao_tcc_revisao_dataset_yuan_2023",
-      "community_name": "Community 2"
+      "community_name": "Community 5",
+      "id": "investigacao_tcc_revisao_dataset_yuan_2023"
     },
     {
       "label": "Guo et al. (2022)",
@@ -119,8 +133,8 @@
       "source_file": "investigacao_tcc_revisao_dataset.md",
       "community": 0,
       "norm_label": "guo et al. (2022)",
-      "id": "investigacao_tcc_revisao_dataset_guo_2022",
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "id": "investigacao_tcc_revisao_dataset_guo_2022"
     },
     {
       "label": "Yager (2003)",
@@ -128,26 +142,264 @@
       "source_file": "investigacao_tcc_revisao_dataset.md",
       "community": 0,
       "norm_label": "yager (2003)",
-      "id": "investigacao_tcc_revisao_dataset_yager_2003",
-      "community_name": "Community 0"
+      "community_name": "Community 0",
+      "id": "investigacao_tcc_revisao_dataset_yager_2003"
     },
     {
       "label": "Revis\u00e3o bibliogr\u00e1fica e levantamento de Datasets",
       "file_type": "rationale",
       "source_file": "arquivos_tcc/Cronograma de Tarefas TCC_d1ea91f9.md",
-      "community": 1,
+      "community": 0,
       "norm_label": "revisao bibliografica e levantamento de datasets",
-      "id": "cronograma_tarefas_tcc_revisao_bibliografica",
-      "community_name": "Community 1"
+      "community_name": "Community 0",
+      "id": "cronograma_tarefas_tcc_revisao_bibliografica"
     },
     {
       "label": "Desenvolvimento e implementa\u00e7\u00e3o da aplica\u00e7\u00e3o",
       "file_type": "rationale",
       "source_file": "arquivos_tcc/Cronograma de Tarefas TCC_d1ea91f9.md",
-      "community": 3,
+      "community": 8,
       "norm_label": "desenvolvimento e implementacao da aplicacao",
-      "id": "cronograma_tarefas_tcc_desenvolvimento",
+      "community_name": "Community 8",
+      "id": "cronograma_tarefas_tcc_desenvolvimento"
+    },
+    {
+      "label": "Knowledge Graph-Based Recommender Systems",
+      "file_type": "paper",
+      "source_file": "A Survey on Knowledge Graph-Based.pdf",
+      "community": 3,
+      "norm_label": "knowledge graph-based recommender systems",
+      "id": "a_survey_on_knowledge_graph_based_kg_rec",
       "community_name": "Community 3"
+    },
+    {
+      "label": "Session-Based Recommender Systems",
+      "file_type": "paper",
+      "source_file": "A Survey on Session-based Recommender Systems.pdf",
+      "community": 6,
+      "norm_label": "session-based recommender systems",
+      "id": "a_survey_on_session_based_recommender_systems_sbrs",
+      "community_name": "Community 6"
+    },
+    {
+      "label": "Fuzzy Recommendation System with Sentiment Analysis and Ontology",
+      "file_type": "paper",
+      "source_file": "A fuzzy recommendation system for predicting the customers interests using sentiment analysis and ontology in e-commerce.pdf",
+      "community": 2,
+      "norm_label": "fuzzy recommendation system with sentiment analysis and ontology",
+      "id": "a_fuzzy_recommendation_system_fuzzy_sentiment_ontology",
+      "community_name": "Community 2"
+    },
+    {
+      "label": "Hybrid Ontology-Based Recommendation System",
+      "file_type": "paper",
+      "source_file": "A_Hybrid_Ontology-Based_Recommendation_System_in_e.pdf",
+      "community": 2,
+      "norm_label": "hybrid ontology-based recommendation system",
+      "id": "a_hybrid_ontology_based_recommendation_system_hybrid_ontology",
+      "community_name": "Community 2"
+    },
+    {
+      "label": "Bridging Language and Items for Retrieval and Recommendation",
+      "file_type": "paper",
+      "source_file": "Bridging Language and Items for Retrieval and Recommendation.pdf",
+      "community": 7,
+      "norm_label": "bridging language and items for retrieval and recommendation",
+      "id": "bridging_language_and_items_language_retrieval",
+      "community_name": "Community 7"
+    },
+    {
+      "label": "Deep Learning Based Recommender System Survey",
+      "file_type": "paper",
+      "source_file": "Deep Learning Based Recommender System A Survey and New Perspectives.pdf",
+      "community": 4,
+      "norm_label": "deep learning based recommender system survey",
+      "id": "deep_learning_based_recommender_system_dl_survey",
+      "community_name": "Community 4"
+    },
+    {
+      "label": "Explainable Recommendation Survey",
+      "file_type": "paper",
+      "source_file": "Explainable Recommendation A Survey and New Perspectives.pdf",
+      "community": 3,
+      "norm_label": "explainable recommendation survey",
+      "id": "explainable_recommendation_explainable_rec_survey",
+      "community_name": "Community 3"
+    },
+    {
+      "label": "Fuzzy Logic in Recommender Systems",
+      "file_type": "paper",
+      "source_file": "Fuzzy Logic in Recommender Systems.pdf",
+      "community": 9,
+      "norm_label": "fuzzy logic in recommender systems",
+      "id": "fuzzy_logic_in_recommender_systems_fuzzy_logic",
+      "community_name": "Community 9"
+    },
+    {
+      "label": "Hybrid Recommender Systems Survey",
+      "file_type": "paper",
+      "source_file": "Hybrid_Recommender_Systems_Survey_and_Experiments.pdf",
+      "community": 4,
+      "norm_label": "hybrid recommender systems survey",
+      "id": "hybrid_recommender_systems_survey_hybrid_survey",
+      "community_name": "Community 4"
+    },
+    {
+      "label": "Knowledge-Based Recommendation",
+      "file_type": "paper",
+      "source_file": "Knowledge-basedrecommendation.pdf",
+      "community": 3,
+      "norm_label": "knowledge-based recommendation",
+      "id": "knowledge_basedrecommendation_kb_rec",
+      "community_name": "Community 3"
+    },
+    {
+      "label": "Recommendation Systems: Principles and Methods",
+      "file_type": "paper",
+      "source_file": "Recommendation-systems--Principles--methods-and-_2015_Egyptian-Informatics-J.pdf",
+      "community": 11,
+      "norm_label": "recommendation systems: principles and methods",
+      "id": "recommendation_systems_principles_methods_principles_methods",
+      "community_name": "Community 11"
+    },
+    {
+      "label": "Ontology Modeling",
+      "file_type": "concept",
+      "source_file": "A_Hybrid_Ontology-Based_Recommendation_System_in_e.pdf",
+      "community": 2,
+      "norm_label": "ontology modeling",
+      "id": "concept_ontology_modeling",
+      "community_name": "Community 2"
+    },
+    {
+      "label": "Sentiment Analysis",
+      "file_type": "concept",
+      "source_file": "A fuzzy recommendation system for predicting the customers interests using sentiment analysis and ontology in e-commerce.pdf",
+      "community": 2,
+      "norm_label": "sentiment analysis",
+      "id": "concept_sentiment_analysis",
+      "community_name": "Community 2"
+    },
+    {
+      "label": "Collaborative Filtering",
+      "file_type": "concept",
+      "source_file": "Recommendation-systems--Principles--methods-and-_2015_Egyptian-Informatics-J.pdf",
+      "community": 4,
+      "norm_label": "collaborative filtering",
+      "id": "concept_collaborative_filtering",
+      "community_name": "Community 4"
+    },
+    {
+      "label": "Recommender Systems",
+      "file_type": "concept",
+      "source_file": "Recommender systems survey.pdf",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 1,
+      "norm_label": "recommender systems",
+      "id": "recommender_systems_survey_recommender_systems",
+      "community_name": "Community 1"
+    },
+    {
+      "label": "Collaborative Filtering",
+      "file_type": "concept",
+      "source_file": "Recommender systems survey.pdf",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 1,
+      "norm_label": "collaborative filtering",
+      "id": "recommender_systems_survey_collaborative_filtering",
+      "community_name": "Community 1"
+    },
+    {
+      "label": "Content-based Filtering",
+      "file_type": "concept",
+      "source_file": "Recommender systems survey.pdf",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 1,
+      "norm_label": "content-based filtering",
+      "id": "recommender_systems_survey_content_based_filtering",
+      "community_name": "Community 1"
+    },
+    {
+      "label": "Hybrid Recommendation Methods",
+      "file_type": "concept",
+      "source_file": "Recommender systems survey.pdf",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 1,
+      "norm_label": "hybrid recommendation methods",
+      "id": "recommender_systems_survey_hybrid_methods",
+      "community_name": "Community 1"
+    },
+    {
+      "label": "Investigative Survey of Recommender Systems",
+      "file_type": "paper",
+      "source_file": "Revisiting recommender systems an investigative survey.pdf",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 1,
+      "norm_label": "investigative survey of recommender systems",
+      "id": "revisiting_recommender_systems_investigative_survey",
+      "community_name": "Community 1"
+    },
+    {
+      "label": "User Cold Start Problem Systematic Review",
+      "file_type": "paper",
+      "source_file": "User_Cold_Start_Problem_in_Recommendation_Systems_A_Systematic_Review.pdf",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 1,
+      "norm_label": "user cold start problem systematic review",
+      "id": "user_cold_start_problem_systematic_review",
+      "community_name": "Community 1"
+    },
+    {
+      "label": "Cold Start Problem",
+      "file_type": "concept",
+      "source_file": "User_Cold_Start_Problem_in_Recommendation_Systems_A_Systematic_Review.pdf",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 1,
+      "norm_label": "cold start problem",
+      "id": "user_cold_start_problem_cold_start",
+      "community_name": "Community 1"
+    },
+    {
+      "label": "Recommender Systems Survey (2005)",
+      "file_type": "paper",
+      "source_file": "recommender-systems-survey-2005.pdf",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 1,
+      "norm_label": "recommender systems survey (2005)",
+      "id": "recommender_systems_survey_2005_survey_2005",
+      "community_name": "Community 1"
     }
   ],
   "links": [
@@ -230,35 +482,185 @@
       "source_file": "arquivos_tcc/Cronograma de Tarefas TCC_d1ea91f9.md",
       "source": "cronograma_tarefas_tcc_revisao_bibliografica",
       "target": "investigacao_tcc_revisao_dataset_karthik_2021"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "A Survey on Knowledge Graph-Based.pdf",
+      "source": "a_survey_on_knowledge_graph_based_kg_rec",
+      "target": "knowledge_basedrecommendation_kb_rec"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "Explainable Recommendation A Survey and New Perspectives.pdf",
+      "source": "explainable_recommendation_explainable_rec_survey",
+      "target": "a_survey_on_knowledge_graph_based_kg_rec"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "A fuzzy recommendation system for predicting the customers interests using sentiment analysis and ontology in e-commerce.pdf",
+      "source": "a_fuzzy_recommendation_system_fuzzy_sentiment_ontology",
+      "target": "concept_ontology_modeling"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "A fuzzy recommendation system for predicting the customers interests using sentiment analysis and ontology in e-commerce.pdf",
+      "source": "a_fuzzy_recommendation_system_fuzzy_sentiment_ontology",
+      "target": "concept_sentiment_analysis"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "A_Hybrid_Ontology-Based_Recommendation_System_in_e.pdf",
+      "source": "a_hybrid_ontology_based_recommendation_system_hybrid_ontology",
+      "target": "concept_ontology_modeling"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Deep Learning Based Recommender System A Survey and New Perspectives.pdf",
+      "source": "deep_learning_based_recommender_system_dl_survey",
+      "target": "concept_collaborative_filtering"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Hybrid_Recommender_Systems_Survey_and_Experiments.pdf",
+      "source": "hybrid_recommender_systems_survey_hybrid_survey",
+      "target": "concept_collaborative_filtering"
+    },
+    {
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "recommender-systems-survey-2005.pdf",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "recommender_systems_survey_2005_survey_2005",
+      "target": "recommender_systems_survey_recommender_systems"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Recommender systems survey.pdf",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "recommender_systems_survey_recommender_systems",
+      "target": "recommender_systems_survey_collaborative_filtering"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Recommender systems survey.pdf",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "recommender_systems_survey_recommender_systems",
+      "target": "recommender_systems_survey_content_based_filtering"
+    },
+    {
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "Revisiting recommender systems an investigative survey.pdf",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "revisiting_recommender_systems_investigative_survey",
+      "target": "recommender_systems_survey_recommender_systems"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "User_Cold_Start_Problem_in_Recommendation_Systems_A_Systematic_Review.pdf",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "user_cold_start_problem_cold_start",
+      "target": "recommender_systems_survey_recommender_systems"
+    },
+    {
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "Recommender systems survey.pdf",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "recommender_systems_survey_hybrid_methods",
+      "target": "recommender_systems_survey_collaborative_filtering"
+    },
+    {
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "Recommender systems survey.pdf",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "recommender_systems_survey_hybrid_methods",
+      "target": "recommender_systems_survey_content_based_filtering"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "User_Cold_Start_Problem_in_Recommendation_Systems_A_Systematic_Review.pdf",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "user_cold_start_problem_systematic_review",
+      "target": "user_cold_start_problem_cold_start"
     }
   ],
   "hyperedges": [
     {
-      "id": "tcc_methodology_flow",
-      "label": "TCC Methodology and Dataset Selection",
+      "id": "semantic_recommendation_approaches",
+      "label": "Semantic and Knowledge-Aware Recommendation",
       "nodes": [
-        "investigacao_dataset_amazon_reviews_2023",
-        "investigacao_dataset_kouzina_club",
-        "investigacao_dataset_premium_product"
+        "a_survey_on_knowledge_graph_based_kg_rec",
+        "knowledge_basedrecommendation_kb_rec",
+        "a_hybrid_ontology_based_recommendation_system_hybrid_ontology",
+        "a_fuzzy_recommendation_system_fuzzy_sentiment_ontology"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "A Survey on Knowledge Graph-Based.pdf"
+    },
+    {
+      "id": "hybrid_and_integrated_systems",
+      "label": "Hybrid Recommendation Frameworks",
+      "nodes": [
+        "hybrid_recommender_systems_survey_hybrid_survey",
+        "a_hybrid_ontology_based_recommendation_system_hybrid_ontology",
+        "recommendation_systems_principles_methods_principles_methods"
+      ],
+      "relation": "form",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "Hybrid_Recommender_Systems_Survey_and_Experiments.pdf"
+    },
+    {
+      "id": "recommendation_methodologies",
+      "label": "Core Recommendation Methodologies",
+      "nodes": [
+        "recommender_systems_survey_collaborative_filtering",
+        "recommender_systems_survey_content_based_filtering",
+        "recommender_systems_survey_hybrid_methods"
       ],
       "relation": "participate_in",
       "confidence": "EXTRACTED",
       "confidence_score": 0.95,
-      "source_file": "investigacao_dataset.md"
-    },
-    {
-      "id": "fuzzy_ontology_research_core",
-      "label": "Fuzzy Ontology Recommendation Research Core",
-      "nodes": [
-        "investigacao_tcc_revisao_dataset_karthik_2021",
-        "investigacao_tcc_revisao_dataset_haw_2024",
-        "investigacao_dataset_fuzzy_ontology_system"
-      ],
-      "relation": "form",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "investigacao_tcc_revisao_dataset.md"
+      "source_file": "Recommender systems survey.pdf"
     }
   ],
-  "built_at_commit": "bf83c5cb8bc4bcc8e3e416b8e29df7c2b6735696"
+  "built_at_commit": "fc23ee6c3dedee3a1f584d94a35db430076d5b39"
 }
