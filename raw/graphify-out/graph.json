@@ -1,0 +1,264 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {
+    "hyperedges": [
+      {
+        "id": "tcc_methodology_flow",
+        "label": "TCC Methodology and Dataset Selection",
+        "nodes": [
+          "investigacao_dataset_amazon_reviews_2023",
+          "investigacao_dataset_kouzina_club",
+          "investigacao_dataset_premium_product"
+        ],
+        "relation": "participate_in",
+        "confidence": "EXTRACTED",
+        "confidence_score": 0.95,
+        "source_file": "investigacao_dataset.md"
+      },
+      {
+        "id": "fuzzy_ontology_research_core",
+        "label": "Fuzzy Ontology Recommendation Research Core",
+        "nodes": [
+          "investigacao_tcc_revisao_dataset_karthik_2021",
+          "investigacao_tcc_revisao_dataset_haw_2024",
+          "investigacao_dataset_fuzzy_ontology_system"
+        ],
+        "relation": "form",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "source_file": "investigacao_tcc_revisao_dataset.md"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "label": "recommendation_fuzzy",
+      "file_type": "code",
+      "source_file": "README.md",
+      "community": 4,
+      "norm_label": "recommendation_fuzzy",
+      "id": "readme_recommendation_fuzzy",
+      "community_name": "Community 4"
+    },
+    {
+      "label": "Amazon Reviews 2023 \u2014 Home and Kitchen",
+      "file_type": "concept",
+      "source_file": "investigacao_dataset.md",
+      "community": 0,
+      "norm_label": "amazon reviews 2023 \u2014 home and kitchen",
+      "id": "investigacao_dataset_amazon_reviews_2023",
+      "community_name": "Community 0"
+    },
+    {
+      "label": "Kouzina Club",
+      "file_type": "concept",
+      "source_file": "investigacao_dataset.md",
+      "community": 0,
+      "norm_label": "kouzina club",
+      "id": "investigacao_dataset_kouzina_club",
+      "community_name": "Community 0"
+    },
+    {
+      "label": "Sistema de Recomenda\u00e7\u00e3o Baseado em Ontologias Fuzzy",
+      "file_type": "concept",
+      "source_file": "investigacao_dataset.md",
+      "community": 0,
+      "norm_label": "sistema de recomendacao baseado em ontologias fuzzy",
+      "id": "investigacao_dataset_fuzzy_ontology_system",
+      "community_name": "Community 0"
+    },
+    {
+      "label": "Cold Start Problem",
+      "file_type": "concept",
+      "source_file": "investigacao_dataset.md",
+      "community": 2,
+      "norm_label": "cold start problem",
+      "id": "investigacao_dataset_cold_start",
+      "community_name": "Community 2"
+    },
+    {
+      "label": "Produto Premium/Luxo",
+      "file_type": "concept",
+      "source_file": "investigacao_dataset.md",
+      "community": 0,
+      "norm_label": "produto premium/luxo",
+      "id": "investigacao_dataset_premium_product",
+      "community_name": "Community 0"
+    },
+    {
+      "label": "Karthik & Ganapathy (2021)",
+      "file_type": "paper",
+      "source_file": "investigacao_tcc_revisao_dataset.md",
+      "community": 1,
+      "norm_label": "karthik & ganapathy (2021)",
+      "id": "investigacao_tcc_revisao_dataset_karthik_2021",
+      "community_name": "Community 1"
+    },
+    {
+      "label": "Haw et al. (2024)",
+      "file_type": "paper",
+      "source_file": "investigacao_tcc_revisao_dataset.md",
+      "community": 0,
+      "norm_label": "haw et al. (2024)",
+      "id": "investigacao_tcc_revisao_dataset_haw_2024",
+      "community_name": "Community 0"
+    },
+    {
+      "label": "Yuan & Hernandez (2023)",
+      "file_type": "paper",
+      "source_file": "investigacao_tcc_revisao_dataset.md",
+      "community": 2,
+      "norm_label": "yuan & hernandez (2023)",
+      "id": "investigacao_tcc_revisao_dataset_yuan_2023",
+      "community_name": "Community 2"
+    },
+    {
+      "label": "Guo et al. (2022)",
+      "file_type": "paper",
+      "source_file": "investigacao_tcc_revisao_dataset.md",
+      "community": 0,
+      "norm_label": "guo et al. (2022)",
+      "id": "investigacao_tcc_revisao_dataset_guo_2022",
+      "community_name": "Community 0"
+    },
+    {
+      "label": "Yager (2003)",
+      "file_type": "paper",
+      "source_file": "investigacao_tcc_revisao_dataset.md",
+      "community": 0,
+      "norm_label": "yager (2003)",
+      "id": "investigacao_tcc_revisao_dataset_yager_2003",
+      "community_name": "Community 0"
+    },
+    {
+      "label": "Revis\u00e3o bibliogr\u00e1fica e levantamento de Datasets",
+      "file_type": "rationale",
+      "source_file": "arquivos_tcc/Cronograma de Tarefas TCC_d1ea91f9.md",
+      "community": 1,
+      "norm_label": "revisao bibliografica e levantamento de datasets",
+      "id": "cronograma_tarefas_tcc_revisao_bibliografica",
+      "community_name": "Community 1"
+    },
+    {
+      "label": "Desenvolvimento e implementa\u00e7\u00e3o da aplica\u00e7\u00e3o",
+      "file_type": "rationale",
+      "source_file": "arquivos_tcc/Cronograma de Tarefas TCC_d1ea91f9.md",
+      "community": 3,
+      "norm_label": "desenvolvimento e implementacao da aplicacao",
+      "id": "cronograma_tarefas_tcc_desenvolvimento",
+      "community_name": "Community 3"
+    }
+  ],
+  "links": [
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "investigacao_dataset.md",
+      "source": "investigacao_dataset_fuzzy_ontology_system",
+      "target": "investigacao_dataset_amazon_reviews_2023"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "investigacao_dataset.md",
+      "source": "investigacao_dataset_fuzzy_ontology_system",
+      "target": "investigacao_dataset_kouzina_club"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "investigacao_dataset.md",
+      "source": "investigacao_dataset_fuzzy_ontology_system",
+      "target": "investigacao_dataset_cold_start"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "investigacao_dataset.md",
+      "source": "investigacao_dataset_fuzzy_ontology_system",
+      "target": "investigacao_dataset_premium_product"
+    },
+    {
+      "relation": "cites",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "investigacao_tcc_revisao_dataset.md",
+      "source": "investigacao_tcc_revisao_dataset_guo_2022",
+      "target": "investigacao_dataset_fuzzy_ontology_system"
+    },
+    {
+      "relation": "cites",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "investigacao_tcc_revisao_dataset.md",
+      "source": "investigacao_tcc_revisao_dataset_haw_2024",
+      "target": "investigacao_dataset_fuzzy_ontology_system"
+    },
+    {
+      "relation": "cites",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "investigacao_tcc_revisao_dataset.md",
+      "source": "investigacao_tcc_revisao_dataset_karthik_2021",
+      "target": "investigacao_dataset_fuzzy_ontology_system"
+    },
+    {
+      "relation": "cites",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "investigacao_tcc_revisao_dataset.md",
+      "source": "investigacao_tcc_revisao_dataset_yager_2003",
+      "target": "investigacao_dataset_fuzzy_ontology_system"
+    },
+    {
+      "relation": "cites",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "investigacao_tcc_revisao_dataset.md",
+      "source": "investigacao_tcc_revisao_dataset_yuan_2023",
+      "target": "investigacao_dataset_cold_start"
+    },
+    {
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "source_file": "arquivos_tcc/Cronograma de Tarefas TCC_d1ea91f9.md",
+      "source": "cronograma_tarefas_tcc_revisao_bibliografica",
+      "target": "investigacao_tcc_revisao_dataset_karthik_2021"
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "tcc_methodology_flow",
+      "label": "TCC Methodology and Dataset Selection",
+      "nodes": [
+        "investigacao_dataset_amazon_reviews_2023",
+        "investigacao_dataset_kouzina_club",
+        "investigacao_dataset_premium_product"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "investigacao_dataset.md"
+    },
+    {
+      "id": "fuzzy_ontology_research_core",
+      "label": "Fuzzy Ontology Recommendation Research Core",
+      "nodes": [
+        "investigacao_tcc_revisao_dataset_karthik_2021",
+        "investigacao_tcc_revisao_dataset_haw_2024",
+        "investigacao_dataset_fuzzy_ontology_system"
+      ],
+      "relation": "form",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "investigacao_tcc_revisao_dataset.md"
+    }
+  ],
+  "built_at_commit": "bf83c5cb8bc4bcc8e3e416b8e29df7c2b6735696"
+}
