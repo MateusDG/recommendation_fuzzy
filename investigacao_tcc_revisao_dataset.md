@@ -59,12 +59,12 @@ Estas referências já aparecem na proposta do TCC e devem ser tratadas como lei
 | Prioridade | Referência                  | Papel no TCC                                                                                                                        |
 | ---------- | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | 1          | KARTHIK; GANAPATHY, 2021     | Trabalho diretamente relacionado: sistema fuzzy com ontologia e análise de sentimento em e-commerce.                               |
-| 2          | HAW et al., 2024             | Trabalho diretamente relacionado: sistema de recomendação baseado em ontologia para e-commerce com filtragem semântica híbrida. |
+| 2          | GUIA; SILVA; BERNARDINO, 2019 | Trabalho diretamente relacionado: sistema híbrido de recomendação baseado em ontologia para e-commerce. |
 | 3          | YUAN; HERNANDEZ, 2023        | Revisão sistemática sobre cold start em sistemas de recomendação.                                                               |
 | 4          | ZHANG et al., 2025           | Survey recente sobre sistemas de recomendação.                                                                                    |
 | 5          | FERREIRA-SATLER et al., 2012 | Base conceitual para perfis de usuário baseados em ontologias fuzzy.                                                               |
 | 6          | FERREIRA-SATLER et al., 2014 | Construção automática de perfis de usuário com ontologias fuzzy.                                                                |
-| 7          | HOU et al., 2023             | Relação com itens, linguagem e recomendação; associado ao Amazon Reviews 2023 dataset.                                          |
+| 7          | HOU et al., 2024             | Relação com itens, linguagem e recomendação; associado ao Amazon Reviews 2023 dataset.                                          |
 
 ---
 
@@ -226,13 +226,13 @@ Alta.
 
 ### 5.5 Lógica fuzzy em recomendação
 
-#### 10. Yager — Fuzzy logic methods in recommender systems
+#### 10. Jain e Gupta — Fuzzy Logic in Recommender Systems
 
 **Referência preliminar:**
-YAGER, Ronald R. *Fuzzy logic methods in recommender systems*. Fuzzy Sets and Systems, 2003.
+JAIN, Amita; GUPTA, Charu. *Fuzzy Logic in Recommender Systems*. In: CASTILLO, O. et al. (org.). *Fuzzy Logic Augmentation of Neural and Optimization Algorithms: Theoretical Aspects and Real Applications*. Studies in Computational Intelligence, v. 749. Cham: Springer, 2018. DOI: 10.1007/978-3-319-71008-2_20.
 
 **Por que acrescentar:**
-É uma referência antiga, mas muito importante para embasar a aplicação de lógica fuzzy em sistemas de recomendação. Ajuda a justificar a modelagem de preferências graduais.
+É a fonte disponível no repositório para embasar a aplicação de lógica fuzzy em sistemas de recomendação. Ajuda a justificar a modelagem de preferências graduais, imprecisão e incerteza em perfis de usuário e atributos de itens.
 
 **Como usar no TCC:**
 Na seção sobre lógica fuzzy aplicada a recomendação, especialmente para explicar que preferências não precisam ser tratadas apenas como valores binários.
@@ -267,15 +267,15 @@ A leitura inicial deve ser concentrada. A recomendação é não tentar ler 40 a
 ### Primeiro ciclo — leitura obrigatória
 
 1. KARTHIK; GANAPATHY, 2021.
-2. HAW et al., 2024.
+2. GUIA; SILVA; BERNARDINO, 2019.
 3. YUAN; HERNANDEZ, 2023.
 4. ZHANG et al., 2025.
 5. FERREIRA-SATLER et al., 2012.
 6. FERREIRA-SATLER et al., 2014.
 7. GUO et al., 2022.
 8. ZHANG; CHEN, 2020.
-9. YAGER, 2003.
-10. HOU et al., 2023.
+9. JAIN; GUPTA, 2018.
+10. HOU et al., 2024.
 
 ### Segundo ciclo — leitura complementar
 
@@ -346,7 +346,7 @@ Conteúdo esperado:
 Fontes principais:
 
 - Guo et al. (2022);
-- Haw et al. (2024);
+- Guia, Silva e Bernardino (2019);
 - Tarus, Niu e Mustafa (2018);
 - Zhang e Chen (2020).
 
@@ -365,7 +365,7 @@ Conteúdo esperado:
 
 Fontes principais:
 
-- Yager (2003);
+- Jain e Gupta (2018);
 - Ferreira-Satler et al. (2012);
 - Ferreira-Satler et al. (2014);
 - Karthik e Ganapathy (2021).
@@ -402,7 +402,7 @@ Conteúdo esperado:
 Fontes principais:
 
 - Karthik e Ganapathy (2021);
-- Haw et al. (2024);
+- Guia, Silva e Bernardino (2019);
 - Guo et al. (2022);
 - Zhang et al. (2025).
 

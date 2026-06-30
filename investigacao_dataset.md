@@ -673,13 +673,13 @@ Conferir todas as referências em bases acadêmicas antes de inserir na versão 
 - FERREIRA-SATLER, M. et al. Fuzzy ontologies-based user profiles applied to enhance e-learning activities. Soft Computing, 2012.
 - FERREIRA-SATLER, M. et al. Fuzzy Ontology-Based Approach for Automatic Construction of User Profiles. RSCTC, 2014.
 - GUO, Qingyu et al. A Survey on Knowledge Graph-Based Recommender Systems. IEEE Transactions on Knowledge and Data Engineering, 2022.
-- HAW, S. C. et al. Ontology-Based E-Commerce Recommender System: A Hybrid Semantic Filtering Approach. Journal of Informatics and Web Engineering, v. 3, n. 3, 2024.
-- HOU, Y. et al. Bridging Language and Items for Retrieval and Recommendation. arXiv preprint, 2023.
+- GUIA, Márcio; SILVA, Rodrigo Rocha; BERNARDINO, Jorge. A Hybrid Ontology-Based Recommendation System in e-Commerce. Algorithms, v. 12, n. 11, 2019.
+- HOU, Y. et al. Bridging Language and Items for Retrieval and Recommendation. arXiv preprint arXiv:2403.03952, 2024.
 - ISINKAYE, F. O.; FOLAJIMI, Y. O.; OJOKOH, B. A. Recommendation systems: Principles, methods and evaluation. Egyptian Informatics Journal, v. 16, n. 3, p. 261-273, 2015.
 - KARTHIK, R. V.; GANAPATHY, S. A fuzzy recommendation system for predicting the customers interests using sentiment analysis and ontology in e-commerce. Applied Soft Computing, v. 108, p. 107396, 2021.
 - TARUS, John K.; NIU, Zhendong; MUSTAFA, Ghazali. Knowledge-based recommendation: a review of ontology-based recommender systems for e-learning. Artificial Intelligence Review, 2018.
 - WANG, Shoujin et al. A Survey on Session-based Recommender Systems. ACM Computing Surveys, 2021.
-- YAGER, Ronald R. Fuzzy logic methods in recommender systems. Fuzzy Sets and Systems, 2003.
+- JAIN, Amita; GUPTA, Charu. Fuzzy Logic in Recommender Systems. In: CASTILLO, O. et al. (org.). Fuzzy Logic Augmentation of Neural and Optimization Algorithms: Theoretical Aspects and Real Applications. Studies in Computational Intelligence, v. 749. Cham: Springer, 2018. DOI: 10.1007/978-3-319-71008-2_20.
 - YUAN, H.; HERNANDEZ, A. A. User Cold Start Problem in Recommendation Systems: A Systematic Review. IEEE Access, v. 11, p. 136223-136238, 2023.
 - ZHANG, Shuai et al. Deep Learning Based Recommender System: A Survey and New Perspectives. ACM Computing Surveys, 2019.
 - ZHANG, Yongfeng; CHEN, Xu. Explainable Recommendation: A Survey and New Perspectives. Foundations and Trends in Information Retrieval, 2020.
