@@ -4,41 +4,76 @@
 Uso:
     python scripts/data/explorar_schema.py data/raw/arquivo.jsonl --limit 1000
     python scripts/data/explorar_schema.py data/raw/arquivo.csv --limit 1000
+    python scripts/data/explorar_schema.py https://exemplo/arquivo.jsonl.gz --limit 1000
 
 O script le apenas uma amostra inicial para evitar carregar datasets grandes em
-memoria. Tambem aceita arquivos compactados com gzip, como .jsonl.gz e .csv.gz.
+memoria. Tambem aceita arquivos compactados com gzip, como .jsonl.gz e .csv.gz,
+inclusive quando informados por URL HTTP/HTTPS.
 """
 
 from __future__ import annotations
 
 import argparse
+from contextlib import contextmanager
 import csv
 import gzip
+import io
 import json
 from collections import Counter, defaultdict
 from itertools import islice
 from pathlib import Path
 from typing import Any, Dict, Iterable, Iterator, List
+from urllib.parse import urlparse
+from urllib.request import Request, urlopen
 
 
 Row = Dict[str, Any]
 
 
-def open_text(path: Path):
+def is_url(source: str) -> bool:
+    parsed = urlparse(source)
+    return parsed.scheme in {"http", "https"}
+
+
+def source_suffixes(source: str) -> List[str]:
+    if is_url(source):
+        return [suffix.lower() for suffix in Path(urlparse(source).path).suffixes]
+    return [suffix.lower() for suffix in Path(source).suffixes]
+
+
+@contextmanager
+def open_text(source: str):
+    if is_url(source):
+        request = Request(source, headers={"User-Agent": "recommendation-fuzzy-schema/1.0"})
+        response = urlopen(request, timeout=60)
+        try:
+            binary_stream = response
+            if source_suffixes(source)[-1:] == [".gz"]:
+                binary_stream = gzip.GzipFile(fileobj=response)
+            text_stream = io.TextIOWrapper(binary_stream, encoding="utf-8", newline="")
+            try:
+                yield text_stream
+            finally:
+                text_stream.close()
+        finally:
+            response.close()
+        return
+
+    path = Path(source)
     if path.suffix.lower() == ".gz":
-        return gzip.open(path, mode="rt", encoding="utf-8", newline="")
-    return path.open(mode="r", encoding="utf-8", newline="")
+        with gzip.open(path, mode="rt", encoding="utf-8", newline="") as file_obj:
+            yield file_obj
+        return
+
+    with path.open(mode="r", encoding="utf-8", newline="") as file_obj:
+        yield file_obj
 
 
-def normalized_suffixes(path: Path) -> List[str]:
-    return [suffix.lower() for suffix in path.suffixes]
-
-
-def detect_format(path: Path, explicit_format: str | None) -> str:
+def detect_format(source: str, explicit_format: str | None) -> str:
     if explicit_format:
         return explicit_format
 
-    suffixes = normalized_suffixes(path)
+    suffixes = source_suffixes(source)
     suffixes_without_gz = [suffix for suffix in suffixes if suffix != ".gz"]
     last_suffix = suffixes_without_gz[-1] if suffixes_without_gz else ""
 
@@ -54,15 +89,15 @@ def detect_format(path: Path, explicit_format: str | None) -> str:
     )
 
 
-def iter_csv(path: Path) -> Iterator[Row]:
-    with open_text(path) as file_obj:
+def iter_csv(source: str) -> Iterator[Row]:
+    with open_text(source) as file_obj:
         reader = csv.DictReader(file_obj)
         for row in reader:
             yield dict(row)
 
 
-def iter_jsonl(path: Path) -> Iterator[Row]:
-    with open_text(path) as file_obj:
+def iter_jsonl(source: str) -> Iterator[Row]:
+    with open_text(source) as file_obj:
         for line_number, line in enumerate(file_obj, start=1):
             line = line.strip()
             if not line:
@@ -77,8 +112,8 @@ def iter_jsonl(path: Path) -> Iterator[Row]:
                 yield {"value": value}
 
 
-def iter_json(path: Path) -> Iterator[Row]:
-    with open_text(path) as file_obj:
+def iter_json(source: str) -> Iterator[Row]:
+    with open_text(source) as file_obj:
         value = json.load(file_obj)
 
     if isinstance(value, list):
@@ -104,13 +139,13 @@ def iter_json(path: Path) -> Iterator[Row]:
     yield {"value": value}
 
 
-def iter_rows(path: Path, file_format: str) -> Iterator[Row]:
+def iter_rows(source: str, file_format: str) -> Iterator[Row]:
     if file_format == "csv":
-        return iter_csv(path)
+        return iter_csv(source)
     if file_format == "jsonl":
-        return iter_jsonl(path)
+        return iter_jsonl(source)
     if file_format == "json":
-        return iter_json(path)
+        return iter_json(source)
     raise ValueError(f"Formato nao suportado: {file_format}")
 
 
@@ -149,7 +184,13 @@ def type_name(value: Any) -> str:
 
 
 def is_null_like(value: Any) -> bool:
-    return value is None or (isinstance(value, str) and value.strip() == "")
+    if value is None:
+        return True
+    if isinstance(value, str):
+        return value.strip() == ""
+    if isinstance(value, (list, dict)):
+        return len(value) == 0
+    return False
 
 
 def collect_stats(rows: Iterable[Row], limit: int) -> tuple[List[Row], List[str], dict]:
@@ -181,9 +222,9 @@ def collect_stats(rows: Iterable[Row], limit: int) -> tuple[List[Row], List[str]
     return sample_rows, columns, stats
 
 
-def print_report(path: Path, file_format: str, limit: int, rows: List[Row], columns: List[str], stats: dict) -> None:
+def print_report(source: str, file_format: str, limit: int, rows: List[Row], columns: List[str], stats: dict) -> None:
     print("=== Exploracao de schema ===")
-    print(f"Arquivo: {path}")
+    print(f"Fonte: {source}")
     print(f"Formato: {file_format}")
     print(f"Linhas analisadas: {len(rows)}")
     print(f"Limite solicitado: {limit}")
@@ -195,12 +236,12 @@ def print_report(path: Path, file_format: str, limit: int, rows: List[Row], colu
         print(f"- {column}")
     print()
 
-    print("=== Tipos e nulos por coluna ===")
+    print("=== Tipos e nulos/vazios por coluna ===")
     if not columns:
         print("Nenhuma coluna encontrada na amostra.")
         return
 
-    header = f"{'coluna':40} {'tipos observados':35} {'presentes':>10} {'nulos':>10} {'ausentes':>10}"
+    header = f"{'coluna':40} {'tipos observados':35} {'presentes':>10} {'nulos/vazios':>13} {'ausentes':>10}"
     print(header)
     print("-" * len(header))
 
@@ -212,7 +253,7 @@ def print_report(path: Path, file_format: str, limit: int, rows: List[Row], colu
             f"{column[:40]:40} "
             f"{type_summary[:35]:35} "
             f"{stats['present'][column]:10} "
-            f"{stats['nulls'][column]:10} "
+            f"{stats['nulls'][column]:13} "
             f"{stats['missing'][column]:10}"
         )
 
@@ -228,7 +269,7 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Explora colunas, tipos e valores nulos de uma amostra do dataset."
     )
-    parser.add_argument("path", help="Caminho para arquivo .csv, .jsonl, .json ou variantes .gz.")
+    parser.add_argument("path", help="Caminho ou URL para arquivo .csv, .jsonl, .json ou variantes .gz.")
     parser.add_argument(
         "--format",
         choices=["csv", "jsonl", "json"],
@@ -246,19 +287,21 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> int:
     args = parse_args()
-    path = Path(args.path)
+    source = args.path
 
     if args.limit <= 0:
         raise ValueError("--limit deve ser maior que zero.")
-    if not path.exists():
-        raise FileNotFoundError(f"Arquivo nao encontrado: {path}")
-    if not path.is_file():
-        raise ValueError(f"O caminho informado nao e um arquivo: {path}")
+    if not is_url(source):
+        path = Path(source)
+        if not path.exists():
+            raise FileNotFoundError(f"Arquivo nao encontrado: {path}")
+        if not path.is_file():
+            raise ValueError(f"O caminho informado nao e um arquivo: {path}")
 
-    file_format = detect_format(path, args.format)
-    rows_iter = iter_rows(path, file_format)
+    file_format = detect_format(source, args.format)
+    rows_iter = iter_rows(source, file_format)
     rows, columns, stats = collect_stats(rows_iter, args.limit)
-    print_report(path, file_format, args.limit, rows, columns, stats)
+    print_report(source, file_format, args.limit, rows, columns, stats)
     return 0
 
 

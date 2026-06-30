@@ -1,0 +1,249 @@
+# Mapeamento inicial Kouzina -> Amazon Reviews 2023 Home_and_Kitchen
+# Baseado em validacao por amostra de 50.000 metadados em 2026-06-30.
+# Este arquivo define filtros exploratorios; nao implementa regra fuzzy definitiva.
+
+dataset:
+  name: Amazon Reviews 2023 - Home_and_Kitchen
+  source_page: https://amazon-reviews-2023.github.io/
+  reviews_url: https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/review_categories/Home_and_Kitchen.jsonl.gz
+  metadata_url: https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/meta_categories/meta_Home_and_Kitchen.jsonl.gz
+  validated_at: "2026-06-30"
+  evidence_sample_size: 50000
+
+join_keys:
+  interaction_user_key: user_id
+  review_item_key: parent_asin
+  metadata_item_key: parent_asin
+  note: "Usar parent_asin para ligar reviews e metadados; asin aparece nas reviews, mas nao foi observado como chave dos metadados."
+
+field_policy:
+  category_fields:
+    - categories
+    - main_category
+  text_fields:
+    - title
+    - features
+    - description
+    - details
+    - store
+  product_quality_fields:
+    - average_rating
+    - rating_number
+  premium_candidate_fields:
+    - price
+    - average_rating
+    - rating_number
+    - store
+    - title
+    - features
+    - description
+    - details
+  warnings:
+    - "price e incompleto; nao usar como filtro obrigatorio universal."
+    - "store pode representar loja/marca textual, mas precisa limpeza antes de ser tratado como marca."
+    - "description e features podem vir vazios."
+    - "termos como premium, luxury, modern, chrome e matte black podem gerar falsos positivos."
+
+categories:
+  - kouzina_category: Cafeteiras premium
+    environment:
+      - Cozinha
+      - Area gourmet
+    revised_relevance: Alta
+    evidence_count_50000: 4580
+    amazon_categories:
+      - Kitchen & Dining
+      - Glassware & Drinkware
+    terms:
+      - coffee
+      - espresso
+      - cappuccino
+      - coffee maker
+      - irish coffee
+      - barista
+
+  - kouzina_category: Fornos e preparo termico
+    environment:
+      - Cozinha
+    revised_relevance: Media
+    evidence_count_50000: 3135
+    amazon_categories:
+      - Appliances
+      - Kitchen & Dining
+    terms:
+      - oven
+      - convection oven
+      - toaster oven
+      - bakeware
+      - baking
+      - roasting
+
+  - kouzina_category: Cooktops e queimadores
+    environment:
+      - Cozinha
+    revised_relevance: Media-alta
+    evidence_count_50000: 734
+    amazon_categories:
+      - Appliances
+      - Kitchen & Dining
+    terms:
+      - cooktop
+      - stovetop
+      - burner
+      - induction
+      - hot plate
+
+  - kouzina_category: Adegas climatizadas e bebidas
+    environment:
+      - Area gourmet
+    revised_relevance: Media
+    evidence_count_50000: 104
+    amazon_categories:
+      - Dining & Entertaining
+      - Kitchen & Dining
+    terms:
+      - wine cooler
+      - wine cellar
+      - wine refrigerator
+      - beverage cooler
+      - wine rack
+
+  - kouzina_category: Panelas premium
+    environment:
+      - Cozinha
+    revised_relevance: Alta
+    evidence_count_50000: 5848
+    amazon_categories:
+      - Kitchen & Dining
+    terms:
+      - cookware
+      - stainless steel
+      - ceramic
+      - cast iron
+      - nonstick
+      - skillet
+      - saucepan
+
+  - kouzina_category: Utensilios gourmet
+    environment:
+      - Cozinha
+      - Area gourmet
+    revised_relevance: Alta
+    evidence_count_50000: 2157
+    amazon_categories:
+      - Kitchen Utensils & Gadgets
+      - Kitchen & Dining
+    terms:
+      - kitchen utensil
+      - utensil
+      - kitchen tool
+      - gadget
+      - chef
+      - knife
+      - spatula
+      - whisk
+      - tongs
+
+  - kouzina_category: Loucas e jantar
+    environment:
+      - Sala de jantar
+      - Area gourmet
+    revised_relevance: Alta
+    evidence_count_50000: 5516
+    amazon_categories:
+      - Dining & Entertaining
+      - Dinnerware & Serveware
+      - Kitchen & Dining
+    terms:
+      - dinnerware
+      - tableware
+      - serveware
+      - plate
+      - bowl
+      - porcelain
+      - ceramic
+
+  - kouzina_category: Organizacao sofisticada
+    environment:
+      - Cozinha
+      - Casa
+    revised_relevance: Media-alta
+    evidence_count_50000: 8621
+    amazon_categories:
+      - Storage & Organization
+      - Kitchen & Dining
+    terms:
+      - storage
+      - organizer
+      - pantry
+      - drawer organizer
+      - countertop
+      - cabinet organizer
+
+  - kouzina_category: Torneiras premium
+    environment:
+      - Banheiro
+      - Cozinha
+    revised_relevance: Media
+    evidence_count_50000: 811
+    amazon_categories:
+      - Bath
+      - Bathroom Accessories
+      - Tools & Home Improvement
+    required_terms:
+      - faucet
+    optional_terms:
+      - sink faucet
+      - bathroom faucet
+      - kitchen faucet
+      - chrome
+      - matte black
+
+  - kouzina_category: Cubas e pias
+    environment:
+      - Banheiro
+      - Cozinha
+    revised_relevance: Media
+    evidence_count_50000: 691
+    amazon_categories:
+      - Bath
+      - Bathroom Accessories
+      - Tools & Home Improvement
+    terms:
+      - sink
+      - basin
+      - vessel sink
+      - bathroom sink
+      - kitchen sink
+
+  - kouzina_category: Chuveiros e acessorios de banho
+    environment:
+      - Banheiro
+    revised_relevance: Media-alta
+    evidence_count_50000: 2710
+    amazon_categories:
+      - Bath
+      - Bathroom Accessories
+    terms:
+      - shower
+      - shower head
+      - rain shower
+      - bath accessory
+
+  - kouzina_category: Decoracao funcional premium
+    environment:
+      - Casa
+      - Area gourmet
+    revised_relevance: Media
+    evidence_count_50000: 25470
+    amazon_categories:
+      - Home Décor Products
+      - Home Décor Accents
+    terms:
+      - decor
+      - decorative
+      - designer
+      - modern
+      - premium
+      - luxury
+    warning: "Categoria ampla; usar como complemento, nao como eixo central do prototipo."
