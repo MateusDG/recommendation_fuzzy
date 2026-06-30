@@ -1,5 +1,7 @@
 # Revisão rigorosa da introdução e das fontes
 
+> Relatório histórico da revisão de fontes. A estrutura e a formatação atuais da introdução foram atualizadas posteriormente conforme o `GUIA_TCC_2026.pdf`. Para a situação vigente, consulte `docs/reports/revisao_abnt_capitulos_1_2_2026-06-30.md`.
+
 Data: 30/06/2026
 
 Arquivo revisado:
